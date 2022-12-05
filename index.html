@@ -20,6 +20,8 @@
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <title>POLSKA Makeup Website</title>
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
 </head>
 
 <body>
@@ -117,10 +119,9 @@
         <div id="back">
             <h1>Best Selling</h1>
             <h3>Browse our best sell</h3>
-            <div id="carouselExampleControls" class="carousel carousel-dark slide" data-bs-ride="carousel"
-                data-bs-interval="false">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
+            <div class="swiper mySwiper" id="swip">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
                         <div class="card">
                             <div class="image-wrapper">
                                 <img src="./images/product-img.png" alt="...">
@@ -133,7 +134,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="carousel-item">
+                    <div class="swiper-slide">
                         <div class="card">
                             <div class="image-wrapper">
                                 <img src="./images/product-img1.png" alt="...">
@@ -146,7 +147,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="carousel-item">
+                    <div class="swiper-slide">
                         <div class="card">
                             <div class="image-wrapper">
                                 <img src="./images/product-img2.png" alt="...">
@@ -159,7 +160,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="carousel-item">
+                    <div class="swiper-slide">
                         <div class="card">
                             <div class="image-wrapper">
                                 <img src="./images/product-img4.png" alt="...">
@@ -173,16 +174,8 @@
                         </div>
                     </div>
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
-                    data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
-                    data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
             </div>
         </div>
         <div class="show-on-desktop" id="Browse">
@@ -252,6 +245,19 @@
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
     <script src="main.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+    </script>
+
 </body>
 
 </html>

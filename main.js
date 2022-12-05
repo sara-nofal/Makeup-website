@@ -10,7 +10,7 @@ document.addEventListener("swiped-left", closeSideNav);*/
 toggler.addEventListener("click", openSideNav);
 overlay.addEventListener("click", closeSideNav);
 
-var carouselWidth = $('.carousel-inner')[0].scrolWidth;
+/*var carouselWidth = $('.carousel-inner')[0].scrolWidth;
 var cardWidth = $('.carousel-item').width();
 
 var scrolPosition = 0;
